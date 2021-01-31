@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+	<p style="font-size: 20px; font-weight: bolder; padding: 10px;">User | Password | Perm Level</p>
+	{% for user in users %}
+        <p style="font-size: 18px; padding: 10px">{{user[0]}} | {{user[1]}} | {{user[2]}}</p>
+    {% endfor %}
+    <a style="font-size: xx-large; color: black; padding: 10px;" href="\admin">Admin Main Page</a>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages%}
+            {% for msg in messages %}
+            <p style="font-size: 18px;">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<h1 style="padding: 20px;">Register New Users</h1>
+<form action="#" method="post" autocomplete="off">
+    <!---<p style="margin-left: 20px; margin-top: 20px; font-size:xx-large">Name:</p>--->
+    <p style="margin-left: 20px;"><input type="text" style="border-radius: 15px; margin-left: 2px;outline: 0px solid transparent;"name="nm" autocomplete="off" placeholder="User"></p>
+    <!---<p style="margin-left: 20px; margin-top: 20px; font-size:xx-large">Password:</p>--->
+    <p style="margin-left: 20px;"><input type="password" style="border-radius: 15px; outline: 0px solid transparent;"name="ps" autocomplete="off" placeholder="Password"></p>
+    <p style="margin-left: 20px;"><input type="number" style="border-radius: 15px; outline: 0px solid transparent;"name="pl" autocomplete="off" placeholder="Permission Level"></p>
+    <p style="margin-left: 20px;"><input type="submit" style="width: 185px" value="Submit"></p>
+</form>
+<a style="font-size: xx-large; color: black; padding: 20px;" href="\admin">Admin Main Page</a>
+{% endblock %}

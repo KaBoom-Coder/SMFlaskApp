@@ -1,0 +1,9 @@
+@app.route('/servers/7c-smp/<what>')
+def start_7csmp(what):
+    if what.lower() == 'start':
+        os.system('system -r')
+        os.system('java -Xmx4086M -jar server.jar')
+        return "Hello"
+    if what.lower() == 'stop':
+        os.system('system -r')
+        pyautogui.hotkey('ctrl', 'c')
